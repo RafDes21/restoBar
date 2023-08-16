@@ -1,0 +1,6 @@
+export {default as Home} from "./home"
+export {default as About} from "./about"
+export {default as Bookings} from "./bookings"
+export {default as Menu} from "./menu"
+export {default as Place} from "./place"
+export {default as Events} from "./events"
