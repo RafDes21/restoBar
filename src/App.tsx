@@ -1,11 +1,14 @@
 
 import './App.css'
+import {Outlet} from "react-router-dom"
 
 function App() {
 
   return (
   <div>
-    <h1>hiola</h1>
+    <h1>navBar</h1>
+    <Outlet/>
+    <div>footer</div>
   </div>
   )
 }
