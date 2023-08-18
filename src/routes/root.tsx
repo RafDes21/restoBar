@@ -1,14 +1,6 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-import {
-  About,
-  Bookings,
-  ErrorPage,
-  Events,
-  Home,
-  Menu,
-  Place,
-} from "../pages";
+import {About,Bookings,ErrorPage,Events,Home,Menu,Place,} from "../pages";
 import App from "../App";
 
 // Definición de la estructura de ruta
