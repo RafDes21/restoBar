@@ -15,7 +15,8 @@ const NavBar = () => {
       <nav className="md:flex relative px-5 max-w-screen-2xl mx-auto justify-between items-center h-auto w-full">
         <div className="font-bold hover:text-[#fad02c] md:text-3xl">
           <Link to={"/"}>
-            El TALLER <span className="font-light text-xs md:text-xl">CERVECERIA</span>
+            El TALLER
+            <span className="font-light text-xs md:text-xl">CERVECERIA</span>
           </Link>
         </div>
         <div className="md:hidden absolute right-5 top-1/2 -translate-y-1/2">
