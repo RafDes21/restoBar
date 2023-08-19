@@ -1,41 +1,40 @@
 import { useState } from "react";
-
-import { SliderItemOne, SliderItemTwo, SliderItemTree } from "./components";
+import { SliderItemOne, SliderItemTree, SliderItemTwo } from "./components";
 
 const Slider = () => {
   const [count, setCount] = useState(1);
-  const [slider, setSlider] = useState(<SliderItemOne/>);
+  const [slider, setSlider] = useState(<SliderItemOne />);
 
-//   const automatic = () => {
-//     switch (count) {
-//       case 1:
-//         setSlider(<SliderItemTwo />);
+  //   const automatic = () => {
+  //     switch (count) {
+  //       case 1:
+  //         setSlider(<SliderItemTwo />);
 
-//         setCount(count + 1);
-//         break;
-//       case 2:
-//         setSlider(<SliderItemTree />);
+  //         setCount(count + 1);
+  //         break;
+  //       case 2:
+  //         setSlider(<SliderItemTree />);
 
-//         setCount(count + 1);
-//         break;
-//       case 3:
-//         setSlider(<SliderItemOne />);
+  //         setCount(count + 1);
+  //         break;
+  //       case 3:
+  //         setSlider(<SliderItemOne />);
 
-//         setCount(1);
-//         break;
+  //         setCount(1);
+  //         break;
 
-//       default:
-//         break;
-//     }
-//   };
-//   useEffect(() => {
-//     const destroy = setInterval(automatic, 5000);
+  //       default:
+  //         break;
+  //     }
+  //   };
+  //   useEffect(() => {
+  //     const destroy = setInterval(automatic, 5000);
 
-//     return () => {
-//       clearInterval(destroy);
-//     };
-//     //eslint-disable-next-line react-hooks/exhaustive-deps
-//   }, [count]);
+  //     return () => {
+  //       clearInterval(destroy);
+  //     };
+  //     //eslint-disable-next-line react-hooks/exhaustive-deps
+  //   }, [count]);
 
   const change = (item: number) => {
     switch (item) {
@@ -57,24 +56,27 @@ const Slider = () => {
     }
   };
   return (
-    <div>
-      <div id="carrusel">
-        <div className="buttons">
+    <div className="h-96 relative w-full">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
+        <div className="flex gap-4 p-3">
           <div
+            className="h-4 w-4 border border-solid border-[#fad02c] rounded-xl"
             onClick={() => change(1)}
             style={{ background: count === 1 ? "rgba(250, 208, 44, 1)" : "" }}
           ></div>
           <div
+            className="h-4 w-4 border border-solid border-[#fad02c] rounded-xl"
             onClick={() => change(2)}
             style={{ background: count === 2 ? "rgba(250, 208, 44, 1)" : "" }}
           ></div>
           <div
+            className="h-4 w-4 border border-solid border-[#fad02c] rounded-xl"
             onClick={() => change(3)}
             style={{ background: count === 3 ? "rgba(250, 208, 44, 1)" : "" }}
           ></div>
         </div>
-        {slider}
       </div>
+        {slider}
       {/* <button onClick={cambio}> click</button> */}
     </div>
   );

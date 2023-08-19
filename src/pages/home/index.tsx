@@ -2,7 +2,7 @@ import Slider from "../../components/slider"
 
 const Home = () => {
   return (
-    <div>
+    <div className="w-full">
       <Slider/>
     </div>
   )
