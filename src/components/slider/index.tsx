@@ -56,21 +56,27 @@ const Slider = () => {
     }
   };
   return (
-    <div className="h-96 relative w-full">
+    <div className="h-96 relative w-full
+                    md:h-[400px]
+                    lg:h-[750px]
+                    ">
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
         <div className="flex gap-4 p-3">
           <div
-            className="h-4 w-4 border border-solid border-[#fad02c] rounded-xl"
+            className="h-3 w-3 border border-solid border-[#fad02c] rounded-xl
+                       md:h-4 md:w-4"
             onClick={() => change(1)}
             style={{ background: count === 1 ? "rgba(250, 208, 44, 1)" : "" }}
           ></div>
           <div
-            className="h-4 w-4 border border-solid border-[#fad02c] rounded-xl"
+            className="h-3 w-3 border border-solid border-[#fad02c] rounded-xl
+                       md:h-4 md:w-4"
             onClick={() => change(2)}
             style={{ background: count === 2 ? "rgba(250, 208, 44, 1)" : "" }}
           ></div>
           <div
-            className="h-4 w-4 border border-solid border-[#fad02c] rounded-xl"
+           className="h-3 w-3 border border-solid border-[#fad02c] rounded-xl
+                     md:h-4 md:w-4"
             onClick={() => change(3)}
             style={{ background: count === 3 ? "rgba(250, 208, 44, 1)" : "" }}
           ></div>
